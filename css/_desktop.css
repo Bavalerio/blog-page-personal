@@ -1,0 +1,88 @@
+.navbar-container {
+    position: relative;
+    font-size: 16px;
+    color: #ffff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: end;
+    text-transform: uppercase;
+}
+
+.navbar-active {
+    color: white;
+}
+
+.title {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 2.5px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+.images-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.images {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    color: #ffff;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+.navbar-active:hover {
+    background: lightseagreen;
+}
+
+@media only screen and (min-width: 64.25em) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: 205px 600px;
+        grid-template-areas: "hd hd hd hd hd hd hd hd" "sd sd main main main main main main" "ft ft ft ft ft ft ft ft ";
+    }
+    .header {
+        grid-area: hd;
+    }
+    .footer {
+        grid-area: ft;
+    }
+    .sidebar {
+        grid-area: sd;
+    }
+    .content {
+        grid-area: main;
+    }
+    .title {
+        font-size: 2em;
+    }
+    .navbar-container {
+        font-size: 2em;
+    }
+}
