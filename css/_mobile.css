@@ -1,53 +1,83 @@
-@media only screen and (max-width: 600px) {
+@media screen and (min-width: 320px) and (max-width: 600px) {
     .container {
         display: grid;
-        grid-template-columns: 300px;
-        grid-template-rows: 205px 600px;
-        grid-template-areas: "hd hd" "sd sd" "main main" "ft ft";
+        grid-template-areas: "nav" "cont" "main" "aside" "footer";
     }
-    .header {
-        grid-area: hd;
-    }
-    .footer {
-        grid-area: ft;
-    }
-    .sidebar {
-        grid-area: sd;
+    .nav {
+        grid-area: nav;
     }
     .content {
+        grid-area: cont;
+    }
+    .aside {
+        grid-area: aside;
+    }
+    .main {
         grid-area: main;
     }
-    .title {
-        font-size: .05em;
+    .footer {
+        grid-area: footer;
     }
-    .navbar-container {
-        font-size: .05em;
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .title {
+        display: none;
+    }
+    .content {
+        display: grid;
+        margin-bottom: 20px;
     }
 }
 
-@media only screen and (max-width: 300px) {
-    .container {
-        display: grid;
-        grid-template-columns: 300px;
-        grid-template-rows: 205px 600px;
-        grid-template-areas: "hd" "sd" "main" "ft";
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {
+        display: none;
     }
-    .box {
-        background: #fffff8;
+    .navbar a.icon {
+        float: right;
+        display: block;
     }
-    .header {
-        grid-area: hd;
+    .card {
+        grid-template-columns: 1fr;
     }
-    .footer {
-        grid-area: ft;
-    }
-    .sidebar {
-        grid-area: sd;
+    .title {
+        display: none;
     }
     .content {
-        grid-area: main;
+        display: grid;
+        grid-gap: 20px;
     }
-    .navbar-container {
+    .main {
         font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar.responsive {
+        position: relative;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .title {
+        display: none;
+    }
+    .content {
+        display: grid;
+        margin-bottom: 20px;
+    }
+    .main {
+        font-size: 14px;
     }
 }

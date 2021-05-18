@@ -6,45 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brayan Blog</title>
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="header box">
-            <div class="navbar-container">
-                <a class="navbar-active" href="index.html">Home</a>
+        <div class="nav">
+
+            <div class="navbar responsive" id="topnavbar">
+                <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            <div class="header-container">
+            <div>
                 <h1 class="title">Brayan Valerio Blog</h1>
+                <div class="box content">
+                    <p class="text-paragraph">
+                        Hi, I'm Brayan Valerio.<br> I Jr FrontEnd Developer. <br>I spend my free time to learn about computing programming.<br> I love summing and play fotball soccer
+                    </p>
+                </div>
             </div>
-        </header>
-        <div class="sidebar box">
-            <div class="images-container">
-                <article>
-                    <img src="./images/img1.jpeg" class="images">
-                </article>
-                <article>
-                    <img src="./images/img1.jpeg" class="images">
-                </article>
-                <article>
-                    <img src="./images/img1.jpeg" class="images">
-                </article>
-                <article>
-                    <img src="./images/img1.jpeg" class="images">
-                </article>
+
+        </div>
+        <div class="content">
+            <div class="card">
+                <img class="card-image" src="./images/app-preview.png" alt="Avatar">
+                <div class="card-container">
+                    <h4><b class="typography">Binary tree</b></h4>
+                    <p class="typography">React App to show how works a binary tree and show html representation or use React third party library
+                    </p>
+                    <a href="https://github.com/Bavalerio/binary-tree">
+                        <i class="fa fa-github fa-4x git-icon"></i>
+                    </a>
+                </div>
             </div>
+
+            <div class="card">
+                <img class="card-image" src="./images/moster-rodolex.png" alt="Avatar">
+                <div class="card-container">
+                    <h4><b class="typography">Monster Rodolex</b></h4>
+                    <p class="typography">React App, implement solution using css and used fetch to cosuming data, implement a component to search monters by name</p>
+                    <a href="https://github.com/Bavalerio/monster-rodolex">
+                        <i class="fa fa-github fa-4x git-icon"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-image" src="./images/react-todo-docker.png" alt="Avatar">
+                <div class="card-container">
+                    <h4><b class="typography">React Todo</b></h4>
+                    <p class="typography">Project working width three containers on docker to implement Backend, Frontend and using Mongo DB</p>
+                    <a href="https://github.com/Bavalerio/todolist-reactjs-example">
+                        <i class="fa fa-github fa-4x git-icon"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div class="content box">
-            <main>
-                <img src="./images/wallpaper-mountain.jpeg" style="width: 100%;">
-            </main>
-        </div>
-        <div class="footer box" style="text-align: center; font-size: 25px;">
-            <footer>
-                <div>Copyright@BryanValerio</div>
-            </footer>
+        <script>
+            function toggleNavbar() {
+                var x = document.getElementById("topnavbar");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }
+        </script>
+        <div class="footer">
+            <a>©2021 BrayanValerio</a>
         </div>
     </div>
 </body>

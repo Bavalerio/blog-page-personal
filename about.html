@@ -6,35 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Title</title>
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container">
-        <header class="header box">
-            <div class="navbar-container">
-                <a href="index.html">Home</a>
-                <a class="navbar-active" href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="title">
-                <h1>Brayan Valerio Blog</h1>
-            </div>
-        </header>
-        <div class="sidebar box">
-            <article>This is an article.</article>
-        </div>
-        <div class="content box">
-            <main>
-                <div>
-                    Main
-                </div>
+        <div class="nav">
 
-            </main>
+            <div class="navbar responsive" id="topnavbar">
+                <a href="index.html">Home</a>
+                <a class="active" href="about.html">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
         </div>
-        <div class="footer box" style="text-align: center; font-size: 25px;">
-            <footer>
-                <div>Copyright@BryanValerio</div>
-            </footer>
+        <div class="content">
+            <h1 class="text-paragraph" id="exp">my experience...</h1>
+        </div>
+        <div class="aside">
+            <div class="card" id="card-about">
+                <h3>Prointec, San José:</h3>
+                <p> Web developer. August 2020- March 2021. I've been part of the family of Prointec for eight months. During this time I've had many challenges, and improved my skills in React Js, Node Js, TypeScript, TypeOrm. One of the biggest challenges
+                    was developing a web server that could switch between multiple database types. We solved this issue with the technologies Nest Js and TypeOrm.</p>
+                <h3>Appttitude, San Jose:</h3>
+                <p> Front-End Developer Junior. September 2019- August 2020 Started using AWS Amplify to deploy AWS infrastructure and utilize data from GraphQL endpoints over AppSync and AWS Lambda functions. Implementing Move! administration tool using
+                    React framework, this tool gave me the opportunity to work with different kinds of components and use hooks to accomplish business requirements. Bug fixing on the React Native app, where users are able to review information related
+                    to sports competitions in Costa Rica( App Move!). Renew the interface to get a more current and attractive design.</p>
+
+                <h3>In this enterprices I learn about this technologies</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>React Js</li>
+                    <li>Angular</li>
+                    <li>Node Js</li>
+                    <li>AWS Cloud</li>
+                    <li>Docker</li>
+                </ul>
+                <h3>Languages</h3>
+                <ul>
+                    <li>Spanish</li>
+                    <li>English intermediate(currently studying).
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="card" id="card-about">
+                <h3>Aptitudes</h3>
+                <ul>
+                    <li>Reponsible</li>
+                    <li>Persistent</li>
+                    <li>Proactive</li>
+                    <li>Respectful</li>
+                </ul>
+
+                <h3>Achievements</h3>
+                <h4>Front-End</h4>
+                <p>I have increased my skills in React,<br>React Native and handling tasks related to the app Move! while improving my proficiency within those frameworks.
+                </p>
+
+                <h4>MEAN Stack</h4>
+                <p>I know how to use stack in a Docker environment</p>
+
+                <h4>MERN Stack</h4>
+                <p>I have the ability to configure a similar stack using React. Docker containers. <br>I can implement the use of containers and intercommunication between them to orchestrate a MEAN stack.</p>
+
+                <h4>Git Flow</h4>
+                <p>I understand these kinds of workflows and how to apply them in a development life cycle.<br>I am aware of the importance to follow it as part of a CI / CD process.</p>
+
+                <h4>TDD / Unit Test</h4>
+                <p>It is clear to me the importance of ensuring the quality of codesl. I have applied these methodologies in several projects and have increased my skills.</p>
+            </div>
+        </div>
+        <script>
+            function toggleNavbar() {
+                var x = document.getElementById("topnavbar");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }
+        </script>
+        <div class="footer">
+            <a>©2021 BrayanValerio</a>
         </div>
     </div>
 </body>
