@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brayan Blog</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="nav">
+
+            <div class="navbar responsive" id="topnavbar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a class="active" href="blog.html">Blog</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <h1 class="title text-paragraph" id="exp">about me...</h1>
+        </header>
+        <div class="content">
+            <div class="card-profile card">
+                <img src="./images/bv.jpg" alt="Avatar" class="avatar">
+                <h1 class="card-title-h1">Brayan Valerio</h1>
+                <p class="card-profile-title">Junior FrontEnd Developer</p>
+                <p><a class="card-profile-a " href="#">Appttitude</a>
+                    <p class="card-profile-title">I'm computer engineer with two year experience.
+                        <br>I worked on two small enterprises in <em>Costa Rica.</em><br>I enjoy learn about computer programming.
+                    </p>
+                    <div>
+                        <div class="social-media-container">
+                            <a class="card-profile-a " href="#"><i class="fa fa-github"></i></a>
+                            <a class="card-profile-a " href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="card-profile-a " href="#"><i class="fa fa-linkedin"></i></a>
+                            <a class="card-profile-a " href="#"><i class="fa fa-facebook"></i></a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <main class="main">
+            <div class="card-profile">
+                <img src="./images/prointec-logo.jpg" alt="Avatar" class="avatar">
+                <h1 class="card-title-h1">Prointec</h1>
+                <p class="card-profile-title">Enterprise with 12 years experience</p>
+                <br>
+                <div>
+                    <div class="social-media-container">
+                        <a class="card-profile-a " href="https://cr.linkedin.com/company/proyectos-e-inversiones-tecnol-gicas-prointec"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="card-profile-a " href="https://es-la.facebook.com/prointeccr"><i
+                                class="fa fa-facebook"></i></a>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </main>
+        <aside class="aside">
+            <div class="card-profile">
+                <img src="./images/appttitude-logo.png" alt="Avatar" class="avatar">
+                <h1 class="card-title-h1">Appttitude</h1>
+                <p class="card-profile-title">Start up Enterprise</p>
+                <p class="card-profile-title"><a class="card-profile-a " href="https://apps.apple.com/cr/app/move/id926587691">App Move!</a></p>
+                <div>
+                    <div class="social-media-container">
+                        <a class="card-profile-a " href="https://github.com/Appttitude"><i class="fa fa-github"></i></a>
+                        <a class="card-profile-a " href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </aside>
+        <footer class="footer">
+            <a>©2021 BrayanValerio</a>
+        </footer>
+        <script>
+            function toggleNavbar() {
+                var x = document.getElementById("topnavbar");
+                if (x.className === "navbar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navbar";
+                }
+            }
+
+            function goTo() {
+                var id = document.getElementById("binary").id;
+                var id = document.getElementById("monster").id;
+                var id = document.getElementById("react").id;
+
+                switch (id) {
+                    case "binary":
+                        return window.location.href = "https://github.com/Bavalerio/binary-tree";
+                    case "monster":
+                        return window.location.href = "https://github.com/Bavalerio/monster-rodolex";
+                    case "react":
+                        return window.location.href = "https://github.com/Bavalerio/todolist-reactjs-example";
+
+                    default:
+                        break;
+                }
+                return
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -4,18 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brayan Blog</title>
+    <title>Home page</title>
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="nav">
+        <header class="nav">
 
             <div class="navbar responsive" id="topnavbar">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
                 <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -23,48 +24,71 @@
             <div>
                 <h1 class="title">Brayan Valerio Blog</h1>
                 <div class="box content">
-                    <p class="text-paragraph">
-                        Hi, I'm Brayan Valerio.<br> I Jr FrontEnd Developer. <br>I spend my free time to learn about computing programming.<br> I love summing and play fotball soccer
-                    </p>
+                    <blockquote>
+                        <p class="text-paragraph">
+                            Hi, I'm Brayan Valerio.<br> I Jr FrontEnd Developer. <br>I spend my free time to learn about computing programming.<br> I love summing and play fotball soccer
+                        </p>
+                    </blockquote>
                 </div>
             </div>
 
-        </div>
-        <div class="content">
+        </header>
+        <article class="content">
             <div class="card">
-                <img class="card-image" src="./images/app-preview.png" alt="Avatar">
+                <figure>
+                    <img class="card-image" src="./images/app-preview.png" alt="Avatar">
+                    <figcaption class="figure-caption">Fig.1- Binary Tree app</figcaption>
+                </figure>
                 <div class="card-container">
                     <h4><b class="typography">Binary tree</b></h4>
-                    <p class="typography">React App to show how works a binary tree and show html representation or use React third party library
+                    <p class="typography">React App to show how works a binary tree and show html representation or use
+                        <em><u>React third party library</u></em>
                     </p>
-                    <a href="https://github.com/Bavalerio/binary-tree">
-                        <i class="fa fa-github fa-4x git-icon"></i>
-                    </a>
                 </div>
-            </div>
-
-            <div class="card">
-                <img class="card-image" src="./images/moster-rodolex.png" alt="Avatar">
                 <div class="card-container">
-                    <h4><b class="typography">Monster Rodolex</b></h4>
-                    <p class="typography">React App, implement solution using css and used fetch to cosuming data, implement a component to search monters by name</p>
-                    <a href="https://github.com/Bavalerio/monster-rodolex">
-                        <i class="fa fa-github fa-4x git-icon"></i>
-                    </a>
+                    <button class="btn" id="binary" onclick="goTo()">
+                        <i class="fa fa-github fa-2x git-icon"></i>
+                    </button>
                 </div>
             </div>
             <div class="card">
-                <img class="card-image" src="./images/react-todo-docker.png" alt="Avatar">
+                <figure>
+                    <img class="card-image" src="./images/moster-rodolex.png" alt="Avatar">
+                    <figcaption class="figure-caption">Fig.2- Moster Rodolex App</figcaption>
+                </figure>
                 <div class="card-container">
-                    <h4><b class="typography">React Todo</b></h4>
-                    <p class="typography">Project working width three containers on docker to implement Backend, Frontend and using Mongo DB</p>
-                    <a href="https://github.com/Bavalerio/todolist-reactjs-example">
-                        <i class="fa fa-github fa-4x git-icon"></i>
-                    </a>
+                    <h4 class="typography">Monster Rodolex App</h4>
+                    <p class="typography">React App, implement solution using css and used <em><u>fetch to get
+                                data</u></em>, implement a component to search monters by name</p>
+                    <br>
+                </div>
+                <div class="card-container">
+                    <button id="monster" class="btn" onclick="goTo()">
+                        <i class="fa fa-github fa-2x git-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img class="card-image" src="./images/react-todo-docker.png" alt="Avatar">
+                    <figcaption class="figure-caption">Fig.3- React Todo App</figcaption>
+                </figure>
+                <div class="card-container">
+                    <h4 class="typography">React Todo App</h4>
+                    <p class="typography" id="react">Project working width three containers on <em><u>docker</u></em> to implement Backend, Frontend and using Mongo DB
+                    </p>
+                </div>
+                <div class="card-container">
+                    <button class="btn git-icon" id="react" onclick="goTo()">
+                        <i class="fa fa-github fa-2x git-icon"></i>
+                    </button>
                 </div>
             </div>
 
-        </div>
+        </article>
+        <footer class="footer">
+            <a>©2021 BrayanValerio</a>
+        </footer>
         <script>
             function toggleNavbar() {
                 var x = document.getElementById("topnavbar");
@@ -74,10 +98,26 @@
                     x.className = "navbar";
                 }
             }
+
+            function goTo() {
+                var id = document.getElementById("binary").id;
+                var id = document.getElementById("monster").id;
+                var id = document.getElementById("react").id;
+
+                switch (id) {
+                    case "binary":
+                        return window.location.href = "https://github.com/Bavalerio/binary-tree";
+                    case "monster":
+                        return window.location.href = "https://github.com/Bavalerio/monster-rodolex";
+                    case "react":
+                        return window.location.href = "https://github.com/Bavalerio/todolist-reactjs-example";
+
+                    default:
+                        break;
+                }
+                return
+            }
         </script>
-        <div class="footer">
-            <a>©2021 BrayanValerio</a>
-        </div>
     </div>
 </body>
 

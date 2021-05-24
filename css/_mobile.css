@@ -24,9 +24,31 @@
     .title {
         display: none;
     }
-    .content {
-        display: grid;
-        margin-bottom: 20px;
+    .card-title-h1 {
+        font-size: 14px;
+    }
+    .card-profile-title,
+    .card-profile-a,
+    .typography,
+    .title-text,
+    .navbar a,
+    p,
+    ul,
+    li {
+        font-size: 16px;
+    }
+    .text-paragraph {
+        font-size: 16px;
+    }
+    .card-profile {
+        max-width: 150px;
+        min-width: 25vh;
+    }
+    .btn {
+        width: 100px;
+    }
+    .footer {
+        display: none;
     }
 }
 
